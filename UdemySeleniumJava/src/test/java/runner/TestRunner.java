@@ -8,9 +8,10 @@ import io.cucumber.junit.CucumberOptions;
 import pages.BasePage;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources", //Directorios de nuestros archivos .feature
+@CucumberOptions(features = "src\\test\\resources", //Directorios de nuestros archivos .feature
     glue = "steps", //Paquete donde tenemos nuestras clases definiendo los steps en el feature file
-    plugin = {"pretty","html:target/cucumber-reports"})
+    plugin = {"pretty","html:target/cucumber-reports"},
+    tags = "@Plans")
 
 public class TestRunner {
     @AfterClass
